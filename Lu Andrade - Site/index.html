@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico Atualizado -->
+    <title>Lu Andrade | Estética Avançada Corporal e Facial</title>
+    <meta name="description" content="Especialista em Depilação a Laser e Pós-operatório. Atendimento em Iporanga (Rua Pedro Silva, 171) e a domicílio em Fazenda Rio Grande, PR.">
+    <meta name="keywords" content="estética, iporanga, depilação a laser, pós-operatório, limpeza de pele, drenagem linfática, fazenda rio grande, lu andrade, perguntas frequentes">
+    <meta name="author" content="Lu Andrade">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones (Feather Icons) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* --- Início de style.css --- */
+        :root {
+            --bg-light: #fdfaf8; /* Bege/Branco suave */
+            --text-dark: #333;
+            --primary: #c5a880; /* Dourado suave */
+            --secondary: #f4e3e0; /* Rosê claro */
+            --white: #ffffff;
+            --font-body: 'Montserrat', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden; /* Previne scroll horizontal */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- 1. Cabeçalho --- */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(253, 250, 248, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            height: 90px; /* ALTURA FIXA E FINA PARA O CABEÇALHO */
+        }
+
+        .header-scrolled {
+             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end; /* MENU ALINHADO À DIREITA */
+            align-items: center;
+            height: 100%;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute; /* LOGO FORA DO FLUXO NORMAL */
+            left: 20px; /* Distância da esquerda */
+            top: 50%; /* Centraliza na vertical */
+            transform: translateY(-50%); /* Ajuste fino da centralização */
+        }
+
+        .logo img {
+            width: 200px;  /* ORDEM CUMPRIDA: 200PX DE LARGURA */
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* --- 2. Seção Principal (Hero) --- */
+        #inicio {
+            padding-top: 90px; /* Adiciona espaço para o cabeçalho fixo */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* <<< CENTRALIZA O CONTEÚDO NO DESKTOP */
+            /* IMAGEM DE FUNDO ATUALIZADA */
+            background: url('https://images.unsplash.com/photo-1616594412437-5953355b25d6?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover;
+            position: relative;
+        }
+
+        #inicio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(253, 250, 248, 0.6); /* Overlay um pouco mais claro */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px; /* Aumentado um pouco para melhor espaçamento */
+            text-align: center; /* <<< TEXTO CENTRALIZADO */
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .hero-content .specialization {
+            font-size: 1.1rem;
+            font-weight: 500;
+            background-color: rgba(255,255,255,0.5);
+            padding: 8px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 30px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(197, 168, 128, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(197, 168, 128, 0.5);
+        }
+
+        /* --- NOVA SEÇÃO CONTADOR --- */
+        #proxima-data {
+            padding: 60px 0;
+            background-color: var(--secondary);
+        }
+        .countdown-wrapper {
+            text-align: center;
+        }
+        .countdown-wrapper h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .countdown-wrapper h2 strong {
+            color: var(--primary);
+        }
+        .countdown-wrapper p {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 30px; /* Espaçamento ajustado */
+        }
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .countdown-el {
+            text-align: center;
+        }
+        .countdown-el span {
+            display: block;
+        }
+        .countdown-el .number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            background-color: var(--white);
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 10px;
+        }
+        .countdown-el .label {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* --- Seções Gerais --- */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        /* --- Sobre --- */
+        #sobre .content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        #sobre .image-container { flex: 1; }
+        #sobre .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        #sobre .text-container { flex: 1.2; }
+        #sobre .text-container p { margin-bottom: 15px; text-align: justify; }
+        
+        /* --- Seção de Informações --- */
+        #informacoes {
+            background-color: var(--white);
+        }
+        .info-item {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .info-item:last-child { margin-bottom: 0; }
+        .info-item:nth-child(even) { flex-direction: row-reverse; }
+        .info-item .icon-container {
+            flex-shrink: 0;
+            background-color: var(--secondary);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+        .info-item .text-content h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .info-item .text-content p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .info-item .text-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .info-item .text-content ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        .info-item .text-content ul li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .info-item .laser-warning {
+            font-size: 14px;
+            color: #888;
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        /* --- Galeria --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-see-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .gallery-see-more a {
+            font-size: 18px;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        .gallery-see-more a strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .gallery-see-more a:hover {
+            color: var(--primary);
+        }
+
+        /* --- Perguntas Frequentes (FAQ) --- */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--secondary);
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-dark);
+        }
+        .faq-question:hover { color: var(--primary); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+        .faq-answer p {
+            padding: 0 10px 20px;
+            margin: 0;
+            color: #555;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Ajuste se necessário */
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-contact {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .faq-contact a {
+            font-size: 18px;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        .faq-contact a strong {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        .faq-contact a:hover {
+            color: var(--primary);
+        }
+
+
+        /* --- Contato --- */
+        #contato {
+            background-color: var(--white);
+        }
+        .contact-info { text-align: center; max-width: 800px; margin: 0 auto; }
+        .contact-locations { display: flex; gap: 30px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; }
+        .location-item { flex: 1; min-width: 280px; padding: 20px; }
+        .location-item .icon { color: var(--primary); margin-bottom: 15px; }
+        .location-item h3 { font-size: 24px; margin-bottom: 10px; }
+        .location-item p { font-size: 16px; color: #555; }
+        .contact-socials { margin-top: 40px; display: flex; justify-content: center; gap: 20px; }
+        .contact-socials a {
+            display: flex; align-items: center; justify-content: center;
+            width: 50px; height: 50px; border: 2px solid var(--primary);
+            border-radius: 50%; color: var(--primary); transition: all 0.3s ease;
+        }
+        .contact-socials a:hover { background-color: var(--primary); color: var(--white); }
+        
+        /* --- Botão Fixo WhatsApp --- */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+            background-color: #25D366; color: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 999;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* --- Rodapé --- */
+        .footer {
+            background-color: #2b2b2b; color: #ccc; padding: 30px 0;
+            text-align: center;
+        }
+        .footer p { margin: 0; font-size: 14px; }
+        .footer a { color: var(--primary); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        /* --- Responsividade --- */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 48px; }
+            #sobre .content { flex-direction: column; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .info-item, .info-item:nth-child(even) { flex-direction: column; text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                justify-content: center; /* <<< CENTRALIZA O LOGO */
+                position: relative; /* Necessário para o ícone */
+            }
+            .logo {
+                position: static;
+                transform: none;
+            }
+            .logo img {
+                width: 180px; /* Logo um pouco menor no mobile */
+            }
+            .nav-menu {
+                display: none; flex-direction: column; position: absolute;
+                top: 90px;
+                left: 0; width: 100%;
+                background-color: var(--bg-light); padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .nav-menu.active { display: flex; }
+            .nav-link { text-align: center; width: 100%; padding: 10px 0; }
+            .nav-link:hover::after { width: 30%; left: 35%; }
+            .mobile-menu-icon {
+                display: block;
+                position: absolute; /* <<< POSICIONA O ÍCONE À DIREITA */
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .hero-content { text-align: center; }
+            .hero-content h1 { font-size: 38px; }
+            .hero-content p { font-size: 16px; }
+            .section { padding: 80px 0; }
+            .section-title h2 { font-size: 34px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .contact-locations { flex-direction: column; }
+            .countdown-el .number { font-size: 32px; width: 80px; height: 80px; line-height: 80px; }
+            .countdown-el .label { font-size: 14px; }
+            
+            /* <<< CENTRALIZA TEXTO DO "SOBRE MIM" NO MOBILE */
+            #sobre .text-container {
+                text-align: center;
+            }
+            #sobre .text-container p {
+                text-align: center;
+            }
+
+            /* <<< AJUSTE PARA QUEBRA DE LINHA DO TEXTO DE ESPECIALIZAÇÃO */
+            .specialization .break-mobile {
+                display: block;
+            }
+        }
+        /* --- Fim de style.css --- */
+    </style>
+</head>
+<body>
+
+    <!-- 1. CABEÇALHO -->
+    <header class="header" id="header">
+        <div class="container navbar">
+            <a href="#inicio" class="logo">
+                <!-- CAMINHO CORRIGIDO E MAIS SEGURO -->
+                <img src="./images/logo.png" alt="Logo Lu Andrade Estética Avançada">
+            </a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#informacoes" class="nav-link">Informações</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="#faq" class="nav-link">Dúvidas</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-icon" id="mobile-menu-icon">
+                <i data-feather="menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. SEÇÃO PRINCIPAL (HERO) -->
+        <section id="inicio">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-right">
+                    <h1>Realce sua beleza com quem cuida de verdade.</h1>
+                    <p>Cuidados estéticos que unem segurança, bem-estar e resultado.</p>
+                    <p class="specialization"> Especialista em Depilação a Laser <span class="break-mobile">e Pós-operatório.</span></p>
+                    <a href="https://wa.me/554192892547?text=Olá!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" class="btn-primary">Agende seu horário no WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DO CONTADOR -->
+        <section id="proxima-data">
+            <div class="container countdown-wrapper" data-aos="fade-up">
+                <h2>Próxima data em Iporanga: <strong>09 de Agosto de 2025</strong></h2>
+                <p>Garanta sua vaga! Faltam:</p>
+                <div class="countdown-container">
+                    <div class="countdown-el">
+                        <span class="number" id="days">00</span>
+                        <span class="label">Dias</span>
+                    </div>
+                    <div class="countdown-el">
+                        <span class="number" id="hours">00</span>
+                        <span class="label">Horas</span>
+                    </div>
+                    <div class="countdown-el">
+                        <span class="number" id="minutes">00</span>
+                        <span class="label">Minutos</span>
+                    </div>
+                    <div class="countdown-el">
+                        <span class="number" id="seconds">00</span>
+                        <span class="label">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SOBRE O ESPAÇO -->
+        <section id="sobre" class="section">
+            <div class="container content">
+                <div class="image-container" data-aos="fade-up">
+                    <!-- FOTO DA LU ANDRADE ATUALIZADA AQUI -->
+                    <img src="./images/foto-lu-andrade.jpg" alt="Foto da profissional Lu Andrade">
+                </div>
+                <div class="text-container" data-aos="fade-up" data-aos-delay="200">
+                    <h2 style="font-size: 36px; margin-bottom: 20px;">Sobre Mim</h2>
+                    <p>Olá! Sou a Lu Andrade, <strong>Tecnóloga em Estética e Cosmética</strong>, e meu compromisso é oferecer não só resultados eficazes, mas também um atendimento humanizado, onde cada cliente se sinta acolhida e confiante.</p>
+                    <p>Atendo principalmente em <strong>Fazenda Rio Grande - PR e região</strong>, onde levo o melhor da estética até o conforto da sua casa. Por conta de um pedido especial para depilação a laser, passei a atender também em <strong>Iporanga</strong>. Sempre que tenho a oportunidade, estou na cidade para levar meus cuidados e ajudar cada pessoa a se sentir ainda melhor consigo mesma.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO DE INFORMAÇÕES -->
+        <section id="informacoes" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Nossos Tratamentos</h2>
+                    <p>Conheça em detalhes os cuidados que oferecemos</p>
+                </div>
+
+                <!-- Depilação a Laser -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="shield" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Depilação a Laser</h3>
+                        <p>O laser enfraquece os pelos desde a raiz, e com o tempo muitos deles param de crescer completamente. Atua diretamente no folículo piloso, com segurança e eficácia.</p>
+                        <ul>
+                            <li>Reduz foliculite, pelos encravados e irritações da lâmina.</li>
+                            <li>Procedimento rápido, seguro e com resultado visível já nas primeiras sessões.</li>
+                            <li>Após o protocolo inicial (10 sessões), o ideal é fazer manutenção 1 ou 2 vezes por ano.</li>
+                        </ul>
+                        <p class="laser-warning">⚠️ Serviço disponível apenas em Iporanga-SP.</p>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20na%20Depilação%20a%20Laser%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Pós-operatório -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="heart" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Cuidados Pós-operatório</h3>
+                        <p>A drenagem linfática manual é essencial para uma recuperação mais rápida e tranquila, prevenindo fibroses e reduzindo edemas (inchaços).</p>
+                        <ul>
+                            <li>Alivia dores e desconfortos do pós-cirúrgico.</li>
+                            <li>Acelera a cicatrização e a remoção de hematomas.</li>
+                            <li>Melhora a circulação e contribui para um resultado mais satisfatório.</li>
+                        </ul>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20nos%20cuidados%20Pós-operatório%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Drenagem Linfática -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="droplet" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Drenagem Linfática</h3>
+                        <p>Técnica suave e terapêutica, que estimula o sistema linfático a eliminar toxinas e líquidos retidos no corpo, proporcionando uma sensação imediata de leveza e bem-estar.</p>
+                        <ul>
+                            <li>Reduz inchaços e melhora a circulação.</li>
+                            <li>Melhora a oxigenação dos tecidos.</li>
+                            <li>Recomendado para quem sofre de retenção líquida.</li>
+                        </ul>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20na%20Drenagem%20Linfática%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Massagem Modeladora -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="minimize-2" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Massagem Modeladora</h3>
+                        <p>Técnica com movimentos intensos e firmes, que ajuda a quebrar gordura localizada, melhorando o contorno corporal e o metabolismo local.</p>
+                        <ul>
+                            <li>Estimula a circulação e combate a celulite.</li>
+                            <li>Resultados visíveis com poucas sessões.</li>
+                            <li>Indicada para regiões como abdômen, coxas e glúteos.</li>
+                        </ul>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20na%20Massagem%20Modeladora%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Massagem Relaxante -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="smile" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Massagem Relaxante</h3>
+                        <p>Proporcione ao seu corpo e mente um momento de paz, silêncio e cuidado. A massagem relaxante atua profundamente no alívio das tensões do dia a dia.</p>
+                        <ul>
+                            <li>Reduz o estresse e a ansiedade.</li>
+                            <li>Melhora a qualidade do sono e alivia dores musculares.</li>
+                            <li>Estimula a liberação de hormônios do bem-estar.</li>
+                        </ul>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20na%20Massagem%20Relaxante%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Limpeza de Pele -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="zap" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Limpeza de Pele com Alta Frequência</h3>
+                        <p>Tem momento mais relaxante do que uma boa limpeza de pele? Para finalizar, usamos a alta frequência, um aparelho que faz toda a diferença na saúde da sua pele.</p>
+                        <ul>
+                            <li>Ajuda a cicatrizar, reduz irritações e tem ação bactericida.</li>
+                            <li>Melhora a circulação e garante um viço saudável e luminoso.</li>
+                            <li>Ideal para pele acneica, com cravos, espinhas e oleosidade excessiva.</li>
+                        </ul>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20na%20Limpeza%20de%20Pele%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Microagulhamento -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="target" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Microagulhamento</h3>
+                        <p>Tratamento estético que estimula a produção natural de colágeno e elastina por meio de microperfurações controladas na pele.</p>
+                        <ul>
+                            <li>Melhora a textura da pele e deixa-a mais firme e uniforme.</li>
+                            <li>Reduz cicatrizes, manchas e linhas finas.</li>
+                            <li>Indicado para melasmas, acne, estrias e poros dilatados.</li>
+                        </ul>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20no%20Microagulhamento%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Eletroterapia -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="activity" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Eletroterapia</h3>
+                        <p>Tecnologia estética que utiliza correntes elétricas específicas para atingir objetivos como redução de medidas, combate à flacidez e fortalecimento muscular.</p>
+                        <ul>
+                            <li>Melhora o contorno corporal e facial.</li>
+                            <li>Pode incluir técnicas como radiofrequência e corrente russa.</li>
+                            <li>Tratamento indolor, com resultados progressivos e visíveis.</li>
+                        </ul>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20na%20Eletroterapia%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Ventosaterapia -->
+                <div class="info-item" data-aos="fade-up">
+                    <div class="icon-container"><i data-feather="wind" width="48" height="48"></i></div>
+                    <div class="text-content">
+                        <h3>Ventosaterapia</h3>
+                        <p>Técnica da Medicina Tradicional Chinesa que alivia dores, melhora a circulação e reduz tensões. Indicado para dores crônicas e estresse, te ajuda a viver com mais leveza.</p>
+                        <ul>
+                            <li>Alivia dores nas costas e rigidez muscular.</li>
+                            <li>Aumenta a elasticidade dos músculos e tecidos.</li>
+                            <li>Técnica indolor que proporciona relaxamento profundo.</li>
+                        </ul>
+                        <a href="https://wa.me/554192892547?text=Olá!%20Tenho%20interesse%20na%20Ventosaterapia%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 16px;">Saiba Mais no WhatsApp</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. GALERIA -->
+        <section id="galeria" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Galeria</h2>
+                    <p>Um pouco do nosso espaço e feedbacks</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-aos="zoom-in">
+                        <img src="./images/galeria-espaco.jpg" alt="Espaço de Estética Andrade">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="./images/galeria-atendimento.jpg" alt="Local de atendimento">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="./images/galeria-feedbacks.jpg" alt="Feedbacks de clientes">
+                    </div>
+                </div>
+                <div class="gallery-see-more" data-aos="fade-up">
+                    <a href="https://www.instagram.com/luandrade.estetica" target="_blank">
+                        Veja mais em <strong>@luandrade.estetica</strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO DE PERGUNTAS FREQUENTES -->
+        <section id="faq" class="section" style="background-color: var(--white);">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Perguntas Frequentes</h2>
+                    <p>Tire suas principais dúvidas sobre nossos tratamentos</p>
+                </div>
+                <div class="faq-container" data-aos="fade-up">
+                    <!-- Pergunta 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Os pelos voltam depois do laser?</span>
+                            <i class="faq-icon" data-feather="plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim e não. O laser enfraquece os pelos desde a raiz e, com o tempo, muitos param de crescer completamente. Porém, o corpo pode produzir novos fios por conta de hormônios ou genética. Por isso, após o protocolo inicial, <strong>o ideal é fazer sessões de manutenção (geralmente 1 ou 2 por ano) para manter o resultado.</strong> Não é que os pelos "voltam", mas sim que novos fios podem surgir, e nós acompanhamos isso de perto com você.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Para quem a limpeza de pele é indicada?</span>
+                            <i class="faq-icon" data-feather="plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>É indicada para todos os tipos de pele, especialmente para quem sofre com cravos, espinhas e excesso de oleosidade. A alta frequência no final do procedimento ajuda a acalmar, cicatrizar e proteger a pele.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Qual a diferença entre drenagem linfática e massagem modeladora?</span>
+                            <i class="faq-icon" data-feather="plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>A drenagem linfática usa movimentos suaves para reduzir o inchaço e eliminar toxinas. Já a massagem modeladora utiliza movimentos firmes e intensos para atuar na gordura localizada e melhorar o contorno corporal.</p>
+                        </div>
+                    </div>
+                     <!-- Pergunta 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Microagulhamento dói? Como fica a pele depois?</span>
+                            <i class="faq-icon" data-feather="plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O procedimento é realizado com um anestésico tópico para minimizar qualquer desconforto. É normal a pele ficar avermelhada por algumas horas após a sessão, mas essa vermelhidão some rapidamente. Os cuidados pós-procedimento são simples e essenciais para um ótimo resultado.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Quando devo começar a drenagem no pós-operatório?</span>
+                            <i class="faq-icon" data-feather="plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O ideal é começar assim que houver a liberação médica, o que geralmente acontece poucos dias após a cirurgia. Iniciar cedo ajuda a acelerar a recuperação, diminuir o inchaço e prevenir a formação de fibroses.</p>
+                        </div>
+                    </div>
+                     <!-- Pergunta 6 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Eletroterapia dá choque?</span>
+                            <i class="faq-icon" data-feather="plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não! Apesar do nome, a eletroterapia utiliza correntes de baixíssima intensidade, que são seguras e indolores. O que se sente é, no máximo, uma leve sensação de formigamento ou contração muscular, dependendo do tratamento.</p>
+                        </div>
+                    </div>
+                     <!-- Pergunta 7 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Ventosaterapia dói?</span>
+                            <i class="faq-icon" data-feather="plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. A técnica é indolor e extremamente relaxante. As marcas arroxeadas que podem surgir são temporárias e indicam uma forte circulação sanguínea na área, o que é benéfico para o alívio de dores e tensões.</p>
+                        </div>
+                    </div>
+                     <!-- Pergunta 8 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Como funciona o atendimento a domicílio?</span>
+                            <i class="faq-icon" data-feather="plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Para os atendimentos em Fazenda Rio Grande - PR e região, levo todo o material necessário até o conforto da sua casa. Você só precisa garantir um espaço tranquilo para realizarmos o procedimento. Entre em contato para verificar a disponibilidade na sua área.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <<< LINK ADICIONADO AQUI -->
+                <div class="faq-contact" data-aos="fade-up">
+                    <a href="https://wa.me/554192892547?text=Olá!%20Vi%20seu%20site%20e%20ainda%20tenho%20algumas%20dúvidas." target="_blank">
+                        Mais dúvidas? <strong>Entre em contato</strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTATO -->
+        <section id="contato" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Fale Comigo</h2>
+                    <p>Estou pronta para te ajudar a realçar sua beleza. Vamos conversar?</p>
+                </div>
+                <div class="contact-info" data-aos="fade-up">
+                    <div class="contact-locations">
+                        <div class="location-item">
+                            <div class="icon"><i data-feather="map-pin" width="36" height="36"></i></div>
+                            <h3>Atendimento em Iporanga - SP</h3>
+                            <p>Rua Pedro Silva, 171</p>
+                        </div>
+                        <div class="location-item">
+                             <div class="icon"><i data-feather="home" width="36" height="36"></i></div>
+                            <h3>Atendimento a Domicílio</h3>
+                            <p>Fazenda Rio Grande - PR e Região</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://wa.me/554192892547?text=Olá!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" aria-label="WhatsApp"><i data-feather="message-circle"></i></a>
+                        <a href="https://www.instagram.com/luandrade.estetica" target="_blank" aria-label="Instagram"><i data-feather="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Botão Fixo WhatsApp -->
+    <a href="https://wa.me/554192892547?text=Olá!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <i data-feather="message-circle" width="32" height="32"></i>
+    </a>
+
+    <!-- 7. RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lu Andrade estética avançada corporal e facial</p>
+            <p style="margin-top: 5px;">Desenvolvido por <a href="#" target="_blank">Higor Matheus</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // --- Início de script.js ---
+
+        // Ativa os ícones
+        feather.replace();
+        
+        // Inicia a biblioteca de animação
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Menu Mobile
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const navMenu = document.getElementById('nav-menu');
+        mobileMenuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Sombra no cabeçalho
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Lógica do FAQ (Acordeão)
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // --- LÓGICA DO CONTADOR ---
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+        const countdownWrapper = document.querySelector('.countdown-wrapper');
+
+        // <<<---------------------------------------------------------->>>
+        // <<<--- EDITE A DATA AQUI (Mês em inglês, Dia, Ano e Hora) --- >>>
+        const proximaData = "Aug 9, 2025 09:00:00";
+        // <<<---------------------------------------------------------->>>
+
+        const countdownDate = new Date(proximaData).getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                clearInterval(interval);
+                countdownWrapper.innerHTML = '<h2>O grande dia chegou! Entre em contato para saber as próximas datas.</h2>';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysEl.innerText = days < 10 ? '0' + days : days;
+            hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+            minutesEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+            secondsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+        // --- FIM DO CONTADOR ---
+
+        // --- Fim de script.js ---
+    </script>
+</body>
+</html>
